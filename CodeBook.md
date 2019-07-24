@@ -8,18 +8,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Data
-==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-==================================================================
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - University degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
+
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 ## Variables
@@ -85,7 +84,7 @@ subject_vector <- rbind(subject_train, subject_test)
 train_and_test_dataset <- cbind(train_and_test_dataset, subject_vector, activity_vector_labeled[,2])
 ```
 
-### 4. Appropriately labels the data set with descriptive variable names.
+### 4. Appropriately labeling the data set with descriptive variable names.
 ```{r}
 names(train_and_test_dataset) <- c(features$V2[indexes_of_selected_columns],"subject", "activity")
 ```
