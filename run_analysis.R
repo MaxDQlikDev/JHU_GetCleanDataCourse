@@ -48,4 +48,4 @@ library(dplyr)
 agg_tidy <- train_and_test_dataset %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
-write.table(agg_tidy, "agg_tidy.csv", row.name=FALSE)
+write.table(agg_tidy, "agg_tidy.txt", row.name=FALSE)
